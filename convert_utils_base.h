@@ -23,6 +23,7 @@
 #include <algorithm>
 #include <string>
 #include <iostream>
+#include <sstream>
 
 namespace mindspore {
 const size_t kGBToByte = 1024 << 20;
