@@ -30,16 +30,16 @@ std::vector<SomasTensorPtr> TensorsListFromFile(const std::string &filepath) {
     std::string value;
 
     getline(ss, value, ',');
-    auto id = static_cast<size_t>(stoi(value));
+    auto id = static_cast<size_t>(stoll(value));
 
     getline(ss, value, ',');
-    auto lower = static_cast<size_t>(stoi(value));
+    auto lower = static_cast<size_t>(stoll(value));
 
     getline(ss, value, ',');
-    auto upper = static_cast<size_t>(stoi(value));
+    auto upper = static_cast<size_t>(stoll(value));
 
     getline(ss, value, ',');
-    auto size = static_cast<size_t>(stoi(value));
+    auto size = static_cast<size_t>(stoll(value));
 
     auto tensor = std::make_shared<SomasTensor>(id, (size_t)0, (size_t)0, size, size, kLifeLongNone);
     tensor->lifetime_.start_ = lower;
